@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://1q548fwtm88c"]
+
+[ext_resource type="Texture2D" uid="uid://brcwmhk7d6px0" path="res://Tiles.png" id="1_7nxku"]
+[ext_resource type="Script" uid="uid://bj35vyifbocyi" path="res://minesweeper.gd" id="2_xrf8k"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlm7j"]
+texture = ExtResource("1_7nxku")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o5st7"]
+sources/0 = SubResource("TileSetAtlasSource_nlm7j")
+
+[node name="Minesweeper" type="TileMap"]
+texture_filter = 1
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_o5st7")
+format = 2
+script = ExtResource("2_xrf8k")
